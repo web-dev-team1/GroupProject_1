@@ -1,0 +1,80 @@
+
+
+<!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/images/web-solutions-logo.png" title="Websolutions"><img src="/images/web-solutions-logo.png" height="55px;" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <% if (title == "Home") { %>
+              <a class="menuitem active" aria-current="page" href="/home"><i class="fa-solid fa-lg fa-house-laptop"></i> Home </a>
+            <% } else { %>
+              <a class="menuitem" aria-current="page" href="/home"><i class="fa-solid fa-lg fa-house-laptop"></i> Home </a>
+            <% } %>
+          </li>
+
+          <li class="nav-item">
+            <% if (title == "Survey") { %>
+              <a class="menuitem active" aria-current="page" href="/survey"><i class="fas fa-book"></i> Survey </a>
+            <% } else { %>
+              <a class="menuitem" aria-current="page" href="/survey"><i class="fas fa-poll"></i> Survey </a>
+            <% } %>
+          </li>
+
+          <li class="nav-item">
+            <% if (title == "About Me") { %>
+              <a class="menuitem active" aria-current="page" href="/about"><i class="fa-sharp fa-solid fa-circle-info"></i> About Me </a>
+            <% } else { %>
+              <a class="menuitem" aria-current="page" href="/about"><i class="fa-sharp fa-solid fa-circle-info"></i> About Me </a>
+            <% } %>
+          </li>
+
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <li class="nav-item">
+              <% if (title == "Template List") { %>
+                <a class="menuitem active" aria-current="page" href="/template-list" ><i class="fas fa-book"></i> Templates </a>
+              <% } else { %>
+                <a class="menuitem" aria-current="page" href="/template-list"><i class="fas fa-book"></i> Templates </a>
+              <% } %>
+            </li>
+
+
+            <li class="nav-item">
+              <% if (title == "Survey List") { %>
+                <a class="menuitem active" aria-current="page" href="/survey-list" ><i class="fas fa-book"></i> Results </a>
+              <% } else { %>
+                <a class="menuitem" aria-current="page" href="/survey-list"><i class="fas fa-book"></i> Results </a>
+              <% } %>
+            </li>
+          <% } %>
+
+          <li class="nav-item" style="padding-right: 40px;">
+            <% if (title == "Contact Me") { %>
+              <a class="menuitem active" aria-current="page" href="/contact"><i class="fa-solid fa-mobile-screen-button"></i> Contact Me </a>
+            <% } else { %>
+              <a class="menuitem" aria-current="page" href="/contact"><i class="fa-solid fa-mobile-screen-button"></i> Contact Me </a>
+            <% } %>
+          </li>
+        
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <li class="nav-item">
+              <li class="navbar-text" style="padding-bottom: 0px; padding-top: 0px; padding-right: 10px;"><i class="fas fa-user" style="padding-left: 10px; padding-right: 10px;"></i>Welcome, <%= displayName %></li>
+            </li>
+            <li class="nav-item">
+              <a class="menuitem" aria-current="page" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout </a>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="menuitem" aria-current="page" href="/login"><i class="fas fa-sign-in-alt"></i> Login </a>
+            </li>
+          <% } %>
+          
+      </div>
+    </div>
+  </nav>

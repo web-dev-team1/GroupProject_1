@@ -1,0 +1,114 @@
+<!--  File Name: edit.ejs
+      Student Name: Marco Favaretto
+      Student ID: 301186334
+      Date: 09/30/2022 -->
+
+      <%- include('../partials/header.ejs') %>
+
+      <%- include('../partials/main_nav.ejs') %>
+      
+      <!-- Content  for the add page -->
+      <div class="container">
+        <div class="row" style="padding-top: 48px;">
+          <div class="offset-md-3 col-md-6">
+            <h1><%=title %> <%=template.Name %></h1>
+
+            <form class="form" method="post">
+              <div class="from-group">
+                <label for="nameTextField">Description</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="q1TextField"
+                  placeholder="Enter a description for the survay:"
+                  name="Q1"
+                  value="<%= template.Description %>"
+                  required
+                />
+              </div>
+      
+            <form class="form" method="post">
+              <div class="from-group">
+                <label for="nameTextField">Question 1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="q1TextField"
+                  placeholder="Enter the first question:"
+                  name="Q1"
+                  value="<%= template.Q1 %>"
+                  required
+                />
+              </div>
+      
+              <div class="from-group">
+                <label for="numberTextField">Answer 1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="a1TextField"
+                  placeholder="Enter the first answer:"
+                  name="A1"
+                  value="<%= template.A1Q1 %>"
+                  required
+                />
+              </div>
+      
+              <div class="from-group">
+                <label for="emailTextField">Answer 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="a2TextField"
+                  placeholder="Enter the second answer:"
+                  name="A2"
+                  value="<%= template.A2Q1 %>"
+                  required
+                />
+              </div>
+              
+              <div class="from-group">
+                <label for="emailTextField">Answer 3</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="a2TextField"
+                  placeholder="Enter the second answer:"
+                  name="A2"
+                  value="<%= template.A3Q1 %>"
+                  required
+                />
+              </div>
+
+              <div class="from-group">
+                <label for="emailTextField">Answer 4</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="a2TextField"
+                  placeholder="Enter the second answer:"
+                  name="A2"
+                  value="<%= template.A4Q1 %>"
+                  required
+                />
+              </div>
+
+              <br/>
+              <br/>
+              
+              <button class="btn btn-primary" type="submit">
+                <i class="fas fa-edit"></i>Submit
+              </button>
+      
+              <a href="/template-list" class="btn btn-warning">
+                <i class="fas fa-undo"></i>Cancel
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      
+      <%- include('../partials/bottom_nav.ejs') %>
+      
+      <%- include('../partials/footer.ejs') %>

@@ -1,0 +1,17 @@
+<%- include('partials/header.ejs') %>
+
+<%- include('partials/main_nav.ejs') %>
+
+  <% if (title == "Home") { %>
+    <%- include('contents/home_content.ejs') %>
+  <% } else if (title == "About Me"){ %>
+    <%- include('contents/about_content.ejs') %>
+  <% } else if (title == "Contact Me"){ %>
+    <%- include('contents/contact_content.ejs') %>
+  <% } else if (title == "Survey"){ %>
+    <%- include('contents/survey_content.ejs') %> 
+  <% } %>
+  
+<%- include('partials/bottom_nav.ejs') %>
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,68 @@
+<%- include('../partials/header.ejs') %>
+
+<%- include('../partials/main_nav.ejs') %>
+
+<!-- Main Content -->
+<main class="container">
+  <div class="row justify-content-center" style="padding-top: 48px; padding-bottom: 80px;">
+    <div class="col-md-offset-3 col-md-8">
+      <h1><%=title %></h1>
+      <% if(typeof displayName == 'string' && displayName) { %>
+        <a href="/survey-list/add" class="btn btn-primary" role="button">
+        <i class ="fas fa-plus-circle"></i> New survey</a>
+      <% } %>
+      <br/>
+      <br/>
+      <table class="table table-bordered table-striped table-hover" >
+        <!--Header row-->
+        <tr>
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <th class="text-center">Gender</th>
+            <th class="text-center">Age</th>
+            <th class="text-center">Annual income</th>
+            <th class="text-center">Marital status</th>
+            <th class="text-center">Employment status</th>
+            <th class="text-center">Education level</th>
+            <th class="text-center col-1"></th>
+          <% } else { %>
+            <th class="text-center">Gender</th>
+            <th class="text-center">Age</th>
+            <th class="text-center">Annual income</th>
+            <th class="text-center">Marital status</th>
+            <th class="text-center">Employment status</th>
+            <th class="text-center">Education level</th>
+          <% } %>  
+        </tr>
+
+        <!--Repetable Templet row-->
+        <% for (let count=0; count<SurveyList.length; count++){%>
+          <tr>
+            <% if(typeof displayName == 'string' && displayName) { %>
+              <td class="text-centre "><%=SurveyList[count].gender %></td>
+              <td class="text-centre "><%=SurveyList[count].age %></td>
+              <td class="text-centre "><%=SurveyList[count].annual_income %></td>
+              <td class="text-centre "><%=SurveyList[count].marital_status %></td>
+              <td class="text-centre "><%=SurveyList[count].employment_status %></td>
+              <td class="text-centre "><%=SurveyList[count].education_level %></td>      
+              <td class="text-center col-1">
+                <a href="/survey-list/delete/<%= SurveyList[count]._id %>" class="btn btn-danger btn-sm">
+                <i class="fas fa-trash-alt"></i> Delete</a>
+              </td>
+            <% } else { %>
+                <td class="text-centre "><%=SurveyList[count].gender %></td>
+                <td class="text-centre "><%=SurveyList[count].age %></td>
+                <td class="text-centre "><%=SurveyList[count].annual_income %></td>
+                <td class="text-centre "><%=SurveyList[count].marital_status %></td>
+                <td class="text-centre "><%=SurveyList[count].employment_status %></td>
+                <td class="text-centre "><%=SurveyList[count].education_level %></td>    
+            <% } %>
+          </tr>
+        <% } %>
+      </table>
+    </div>
+  </div>
+</main>
+
+<%- include('../partials/bottom_nav.ejs') %>
+
+<%- include('../partials/footer.ejs') %>
