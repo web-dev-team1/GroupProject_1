@@ -3,261 +3,97 @@
   <%- include('../partials/main_nav.ejs') %>
 
     <!-- Content  for the add page -->
-    <div class="template_content">
-    <div class="container">
-      <div class="row" style="padding-top: 48px;">
-        <div class="offset-md-3 col-md-6">
-          <h1>
-            <%=title %>
-              <%=template.Name %>
-          </h1>
-          <% if (template.Name=="Template 1" ) { %>
+    <div class="template_content" style="margin-bottom: 80px;">
+      <div class="container">
+        <div class="row" style="padding-top: 48px;">
+          <div class="offset-md-3 col-md-6">
+            <h1>
+              <%=title %>
+                <%=template.Name %>
+            </h1>
+            <% if (template.Name=="Template 1" ) { %>
 
-            <form class="form" method="post">
-              <div class="form-group row">
-                <legend class="col-form-label col-sm-2 pt-0">Description</legend>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="q1TextField"
-                    placeholder="Enter a description for the survay:" name="Q1" value="<%= template.Description %>"
-                    required />
-                </div>
-              </div>
-              
-              <br />
-              <div class="form-group row">
-                <legend class="col-form-label col-sm-2 pt-0">Q1</legend>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="q2TextField" placeholder="Type Q1 here" name="Q1"
-                    value="<%= template.Q1 %>" required />
-                </div>
-              </div>
-              <br />
-              <fieldset class="form-group">
-                <div class="row">
-                  <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
-                  <div class="col-sm-5">
-                    <!-- <input class="form-check-input" type="radio" id="a1q2GridRadios" name="a1q2Radio"
-                        value="<%= template.A1Q1 %>">-->
-                    <!--value="option1" was the original value-->
-                    <input class="form-control" type="text" id="a1q1TextField" name="A1Q1" placeholder="First answer"
-                      value="<%= template.A1Q1 %>" required />
-
-                    <!--  <input class="form-check-input" type="radio" id="a2q2GridRadios" name="a2q2Radio"
-                        value="<%= template.A2Q1 %>">-->
-                    <!--value="option2" was the original value-->
-                    <input class="form-control" type="text" id="a2q1TextField" name="A2Q1" placeholder="Second answer"
-                      value="<%= template.A2Q1 %>" required />
-
-
-                    <!-- <input class="form-check-input" type="radio" id="a3q2GridRadios" name="a3q2Radio"
-                        value="<%= template.A3Q1 %>">-->
-                    <!--value="option3" was the original value-->
-                    <input type="hidden" id="a3q1TextField" name="A3Q1" value="<%= template.A3Q1 %>
-                      <input class=" form-control" type="text" id="a3q1TextField" name="A3Q1"
-                      placeholder="Third answer" value="<%= template.A3Q1 %>" required />
-
-
-                    <!--  <input class="form-check-input" type="radio" id="a4q2GridRadios" name="a4q2Radio"
-                        value="<%= template.A4Q1 %>">-->
-                    <!--value="option4" was the original value-->
-                    <input type="hidden" id="a4q1TextField" name="A3Q1" value="<%= template.A4Q1 %>
-                      <input class=" form-control" type="text" id="a4q1TextField" name="A4Q1"
-                      placeholder="Fourth answer" value="<%= template.A4Q1 %>" required />
-                  </div>
-              </fieldset>
-              <br />
-              <br />
-              <div class="form-group row">
-                <legend class="col-form-label col-sm-2 pt-0">Q2</legend>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="q2TextField" placeholder="Type Q2 here" name="Q2"
-                    value="<%= template.Q2 %>" required />
-                </div>
-              </div>
-              <br />
-              <fieldset class="form-group">
-                <div class="row">
-                  <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
-                  <div class="col-sm-10">
-                    <!-- <input class="form-check-input" type="radio" id="a1q2GridRadios" name="a1q2Radio"
-                        value="<%= template.A1Q2 %>">-->
-                    <!--value="option1" was the original value-->
-                    <input class="form-control" type="text" id="a1q2TextField" name="A1Q2" placeholder="First answer"
-                      value="<%= template.A1Q2 %>"/>
-
-                    <!--  <input class="form-check-input" type="radio" id="a2q2GridRadios" name="a2q2Radio"
-                        value="<%= template.A2Q2 %>">-->
-                    <!--value="option2" was the original value-->
-                    <input class="form-control" type="text" id="a2q2TextField" name="A2Q2" placeholder="Second answer"
-                      value="<%= template.A2Q2 %>" />
-
-
-                    <!-- <input class="form-check-input" type="radio" id="a3q2GridRadios" name="a3q2Radio"
-                        value="<%= template.A3Q2 %>">-->
-                    <!--value="option3" was the original value-->
-                    <input type="hidden" id="a3q2TextField" name="A3Q2" value="<%= template.A3Q1 %>
-                      <input class=" form-control" type="text" id="a3q2TextField" name="A3Q2"
-                      placeholder="Third answer" value="<%= template.A3Q2 %>" required />
-
-
-                    <!--  <input class="form-check-input" type="radio" id="a4q2GridRadios" name="a4q2Radio"
-                        value="<%= template.A4Q2 %>">-->
-                    <!--value="option4" was the original value-->
-                    <input type="hidden" id="a4q2TextField" name="A3Q1" value="<%= template.A4Q2 %>
-                      <input class=" form-control" type="text" id="a4q2TextField" name="A4Q2"
-                      placeholder="Fourth answer" value="<%= template.A4Q2 %>" required />
-                  </div>
-              </fieldset>
-              <br />
-              <br />
-              <div class="form-group row">
-                <legend class="col-form-label col-sm-2 pt-0">Q3</legend>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="q3TextField" placeholder="Type Q3 here" name="Q3"
-                    value="<%= template.Q3 %>" required />
-                </div>
-              </div>
-              <br />
-              <fieldset class="form-group">
-                <div class="row">
-                  <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
-                  <div class="col-sm-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="a1q3GridRadios" name="Q3"
-                        value="<%= template.A1Q3 %>">
-                      <!--value="option1" was the original value-->
-                      <input class="form-control" type="text" id="a1q3TextField" name="A1Q3" placeholder="First answer"
-                        value="<%= template.A1Q3 %>" required />
-
-                      <input class="form-check-input" type="radio" id="a2q3GridRadios" name="Q3"
-                        value="<%= template.A2Q3 %>">
-                      <!--value="option2" was the original value-->
-                      <input class="form-control" type="text" id="a2q3TextField" name="A2Q3" placeholder="Second answer"
-                        value="<%= template.A2Q3 %>" required />
-
-                      <input class="form-check-input" type="radio" id="a3q3GridRadios" name="Q3"
-                        value="<%= template.A3Q3 %>">
-                      <!--value="option3" was the original value-->
-                      <input class="form-control" type="text" id="a3q3TextField" name="A3Q3" placeholder="Third answer"
-                        value="<%= template.A3Q3 %>" required />
-
-                      <input class="form-check-input" type="radio" id="a4q3GridRadios" name="Q3"
-                        value="<%= template.A4Q3 %>">
-                      <!--value="option4" was the original value-->
-                      <input class="form-control" type="text" id="a4q3TextField" name="A4Q3" placeholder="Fourth answer"
-                        value="<%= template.A4Q3 %>" required />
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <br />
-              <div class="form-group row">
-                <legend class="col-form-label col-sm-2 pt-0">Q4</legend>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="q4TextField" placeholder="Type Q4 here" name="Q4"
-                    value="<%= template.Q4 %>" required />
-                </div>
-              </div>
-              <br />
-              <fieldset class="form-group">
-                <div class="row">
-                  <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
-                  <div class="col-sm-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" id="a1q4GridRadios" name="Q4"
-                        value="<%= template.A1Q4 %>">
-                      <!--value="option1" was the original value-->
-                      <input class="form-control" type="text" id="a1q4TextField" name="A1Q4" placeholder="First answer"
-                        value="<%= template.A1Q4 %>" required />
-
-                      <input class="form-check-input" type="radio" id="a2q4GridRadios" name="Q4"
-                        value="<%= template.A2Q4 %>">
-                      <!--value="option2" was the original value-->
-                      <input class="form-control" type="text" id="a2q4TextField" name="A2Q4" placeholder="Second answer"
-                        value="<%= template.A2Q4 %>" required />
-
-                      <input class="form-check-input" type="radio" id="a3q4GridRadios" name="Q4"
-                        value="<%= template.A3Q4 %>">
-                      <!--value="option3" was the original value-->
-                      <input class="form-control" type="text" id="a3q4TextField" name="A3Q4" placeholder="Third answer"
-                        value="<%= template.A3Q4 %>" required />
-
-                      <input class="form-check-input" type="radio" id="a4q4GridRadios" name="Q4"
-                        value="<%= template.A4Q4 %>">
-                      <!--value="option4" was the original value-->
-                      <input class="form-control" type="text" id="a4q4TextField" name="A4Q4" placeholder="Fourth answer"
-                        value="<%= template.A4Q4 %>" required />
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <br />
-              <div class="form-group row">
-                <legend class="col-form-label col-sm-2 pt-0">Q5</legend>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="q3TextField" placeholder="Type Q5 here" name="Q5"
-                    value="<%= template.Q5 %>" required />
-                </div>
-              </div>
-              <br />
-              <fieldset class="form-group">
-                <div class="row">
-                  <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" id="a1q6TextField" rows="3"></textarea>
-                  </div>
-                  <br />
-                  <br />
-                 </div>
-              </fieldset>
-              <br />
-              <div class="form-group row">
-                <legend class="col-form-label col-sm-2 pt-0">Q6</legend>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="q6TextField" placeholder="Type Q6 here" name="Q6"
-                    value="<%= template.Q6 %>" required />
-                </div>
-              </div>
-              <br />
-              <fieldset class="form-group">
-                <div class="row">
-                  <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
-                  <div class="col-sm-10">
-                    <textarea class="form-control" id="a1q4TextField" rows="3"></textarea>
-                  </div>
-              </fieldset>
-              <br />
-              <br />
-              <div class="survey_buttons">
-              <button class="btn btn-primary" type="submit" style="margin-bottom: 100px;">
-                <i class="fas fa-edit"></i>Submit
-              </button>
-
-              <a href="/template-list" class="btn btn-warning" style="margin-bottom: 100px;">
-                <i class="fas fa-undo"></i>Cancel
-              </a>
-            </div>
-            </form> %>
-
-    
-          <h1>
-            <% } else if (template.Name=="Template 2" ){ %>
               <form class="form" method="post">
                 <div class="form-group row">
-                  <legend class="col-form-label col-sm-2 pt-0">Description</legend>
+                  <legend class="col-form-label col-sm-2 pt-0" style="padding-left: 0;">Description</legend>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" id="q1TextField"
-                      placeholder="Enter a description for the survay:" name="Q1" value="<%= template.Description %>"
-                      required />
+                      placeholder="Enter a description for the survay:" name="Description"
+                      value="<%= template.Description %>" required="required" 
+                    />
                   </div>
                 </div>
-                <br />
 
+                <br />
                 <div class="form-group row">
                   <legend class="col-form-label col-sm-2 pt-0">Q1</legend>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="q1TextField" placeholder="Type Q1 here" name="Q1"
-                      value="<%= template.Q1 %>" required />
+                    <input type="text" class="form-control" id="q2TextField" placeholder="Type Q1 here" name="Q1"
+                      value="<%= template.Q1 %>" required="required" 
+                    />
+                  </div>
+                </div>
+                <br />
+                <fieldset class="form-group">
+                  <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
+                    <div class="col-sm-5">
+
+                      <!--value="option1" was the original value-->
+                      <input class="form-control" type="text" id="a1q1TextField" name="A1Q1" placeholder="First answer"
+                        value="<%= template.A1Q1 %>" required="required" />
+
+                      <!--value="option2" was the original value-->
+                      <input class="form-control" type="text" id="a2q1TextField" name="A2Q1" placeholder="Second answer"
+                        value="<%= template.A2Q1 %>" required="required" />
+
+                      <!--value="option3" was the original value-->
+                      <input type="hidden" id="a3q1TextField" name="A3Q1" value="<%= template.A3Q1 %>" />
+
+                      <!--value="option4" was the original value-->
+                      <input type="hidden" id="a4q1TextField" name="A3Q1" value="<%= template.A4Q1 %>" />
+                    </div>
+                  </div>
+                </fieldset>
+                <br />
+                <br />
+                <div class="form-group row">
+                  <legend class="col-form-label col-sm-2 pt-0">Q2</legend>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="q2TextField" placeholder="Type Q2 here" name="Q2"
+                      value="<%= template.Q2 %>" required="required" 
+                    />
+                  </div>
+                </div>
+                <br />
+                <fieldset class="form-group">
+                  <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
+                    <div class="col-sm-10">
+                      <!--value="option1" was the original value-->
+                      <input class="form-control" type="text" id="a1q2TextField" name="A1Q2" placeholder="First answer"
+                        value="<%= template.A1Q2 %>" />
+
+                      <!--value="option2" was the original value-->
+                      <input class="form-control" type="text" id="a2q2TextField" name="A2Q2" placeholder="Second answer"
+                        value="<%= template.A2Q2 %>" />
+
+                      <!--value="option3" was the original value-->
+                      <input type="hidden" id="a3q2TextField" name="A3Q2" value="<%= template.A3Q1 %>" />
+
+                      <!--value="option4" was the original value-->
+                      <input type="hidden" id="a4q2TextField" name="A3Q1" value="<%= template.A4Q2 %>" />
+                    </div>
+                  </div>
+                </fieldset>
+                <br />
+                <br />
+                <div class="form-group row">
+                  <legend class="col-form-label col-sm-2 pt-0">Q3</legend>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="q3TextField" placeholder="Type Q3 here" name="Q3"
+                      value="<%= template.Q3 %>" required="required" 
+                    />
                   </div>
                 </div>
                 <br />
@@ -266,41 +102,48 @@
                     <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
                     <div class="col-sm-5">
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" id="a1q1GridRadios" name="AQ1"
-                          value="<%= template.A1Q1 %>">
+                        <input class="form-check-input" type="radio" id="a1q3GridRadios" name="Q3"
+                          value="<%= template.A1Q3 %>" 
+                        />
                         <!--value="option1" was the original value-->
-                        <input class="form-control" type="text" id="a1q1TextField" name="A1Q1"
-                          placeholder="First answer" value="<%= template.A1Q1 %>" required />
+                        <input class="form-control" type="text" id="a1q3TextField" name="A1Q3"
+                          placeholder="First answer" value="<%= template.A1Q3 %>" required="required" 
+                        />
 
-                        <input class="form-check-input" type="radio" id="a2q1GridRadios" name="AQ1"
-                          value="<%= template.A2Q1 %>">
+                        <input class="form-check-input" type="radio" id="a2q3GridRadios" name="Q3"
+                          value="<%= template.A2Q3 %>" 
+                        />
                         <!--value="option2" was the original value-->
-                        <input class="form-control" type="text" id="a2q1TextField" name="A2Q1"
-                          placeholder="Second answer" value="<%= template.A2Q1 %>" required />
+                        <input class="form-control" type="text" id="a2q3TextField" name="A2Q3"
+                          placeholder="Second answer" value="<%= template.A2Q3 %>" required="required" 
+                        />
 
-                        <input type="hidden" id="a3q6TextField" name="A3Q1" value="<%= template.A3Q1 %>
-                      <!--<input class=" form-check-input" type="radio" id="a3q1GridRadios" name="AQ1"
-                          value="<%= template.A3Q1 %>">
+                        <input class="form-check-input" type="radio" id="a3q3GridRadios" name="Q3"
+                          value="<%= template.A3Q3 %>" 
+                        />
                         <!--value="option3" was the original value-->
-                        <!--  <input class="form-control" type="text" id="a3q1TextField" name="A3Q1" placeholder="Third answer"
-                          value="<%= template.A3Q1 %>" required />-->
+                        <input class="form-control" type="text" id="a3q3TextField" name="A3Q3"
+                          placeholder="Third answer" value="<%= template.A3Q3 %>" required="required" 
+                        />
 
-
-                        <!--<input class="form-check-input" type="radio" id="a4q1GridRadios" name="A4Q1"
-                          value="<%= template.A4Q1 %>">-->
+                        <input class="form-check-input" type="radio" id="a4q3GridRadios" name="Q3"
+                          value="<%= template.A4Q3 %>" 
+                        />
                         <!--value="option4" was the original value-->
-                        <!--<input class="form-control" type="text" id="a4q1TextField" name="A4Q1" placeholder="Fourth answer"
-                          value="<%= template.A4Q1 %>" required />-->
+                        <input class="form-control" type="text" id="a4q3TextField" name="A4Q3"
+                          placeholder="Fourth answer" value="<%= template.A4Q3 %>" required="required" 
+                        />
                       </div>
                     </div>
                   </div>
                 </fieldset>
                 <br />
                 <div class="form-group row">
-                  <legend class="col-form-label col-sm-2 pt-0">Q2</legend>
+                  <legend class="col-form-label col-sm-2 pt-0">Q4</legend>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="q2TextField" placeholder="Type Q2 here" name="Q2"
-                      value="<%= template.Q2 %>" required />
+                    <input type="text" class="form-control" id="q4TextField" placeholder="Type Q4 here" name="Q4"
+                      value="<%= template.Q4 %>" required="required" 
+                    />
                   </div>
                 </div>
                 <br />
@@ -308,41 +151,68 @@
                   <div class="row">
                     <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
                     <div class="col-sm-5">
-                      <!-- <input class="form-check-input" type="radio" id="a1q2GridRadios" name="a1q2Radio"
-                          value="<%= template.A1Q2 %>">-->
-                      <!--value="option1" was the original value-->
-                      <input class="form-control" type="text" id="a1q2TextField" name="A1Q2" placeholder="First answer"
-                        value="<%= template.A1Q2 %>" required />
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" id="a1q4GridRadios" name="Q4"
+                          value="<%= template.A1Q4 %>" 
+                        />
+                        <!--value="option1" was the original value-->
+                        <input class="form-control" type="text" id="a1q4TextField" name="A1Q4"
+                          placeholder="First answer" value="<%= template.A1Q4 %>" required="required" 
+                        />
 
-                      <!--  <input class="form-check-input" type="radio" id="a2q2GridRadios" name="a2q2Radio"
-                          value="<%= template.A2Q2 %>">-->
-                      <!--value="option2" was the original value-->
-                      <input class="form-control" type="text" id="a2q2TextField" name="A2Q2" placeholder="Second answer"
-                        value="<%= template.A2Q2 %>" required />
+                        <input class="form-check-input" type="radio" id="a2q4GridRadios" name="Q4"
+                          value="<%= template.A2Q4 %>" />
+                        <!--value="option2" was the original value-->
+                        <input class="form-control" type="text" id="a2q4TextField" name="A2Q4"
+                          placeholder="Second answer" value="<%= template.A2Q4 %>" required="required" 
+                        />
 
+                        <input class="form-check-input" type="radio" id="a3q4GridRadios" name="Q4"
+                          value="<%= template.A3Q4 %>" 
+                        />
+                        <!--value="option3" was the original value-->
+                        <input class="form-control" type="text" id="a3q4TextField" name="A3Q4"
+                          placeholder="Third answer" value="<%= template.A3Q4 %>" required="required" 
+                        />
 
-                      <!-- <input class="form-check-input" type="radio" id="a3q2GridRadios" name="a3q2Radio"
-                          value="<%= template.A3Q2 %>">-->
-                      <!--value="option3" was the original value-->
-                      <input type="hidden" id="a3q2TextField" name="A3Q2" value="<%= template.A3Q1 %>
-                        <input class=" form-control" type="text" id="a3q2TextField" name="A3Q2"
-                        placeholder="Third answer" value="<%= template.A3Q2 %>" required />
-
-
-                      <!--  <input class="form-check-input" type="radio" id="a4q2GridRadios" name="a4q2Radio"
-                          value="<%= template.A4Q2 %>">-->
-                      <!--value="option4" was the original value-->
-                      <input type="hidden" id="a4q2TextField" name="A3Q1" value="<%= template.A4Q2 %>
-                        <input class=" form-control" type="text" id="a4q2TextField" name="A4Q2"
-                        placeholder="Fourth answer" value="<%= template.A4Q2 %>" required />
+                        <input class="form-check-input" type="radio" id="a4q4GridRadios" name="Q4"
+                          value="<%= template.A4Q4 %>" 
+                        />
+                        <!--value="option4" was the original value-->
+                        <input class="form-control" type="text" id="a4q4TextField" name="A4Q4"
+                          placeholder="Fourth answer" value="<%= template.A4Q4 %>" required="required" 
+                        />
+                      </div>
                     </div>
+                  </div>
                 </fieldset>
                 <br />
                 <div class="form-group row">
-                  <legend class="col-form-label col-sm-2 pt-0">Q3</legend>
+                  <legend class="col-form-label col-sm-2 pt-0">Q5</legend>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="q3TextField" placeholder="Type Q3 here" name="Q3"
-                      value="<%= template.Q3 %>" required />
+                    <input type="text" class="form-control" id="q3TextField" placeholder="Type Q5 here" name="Q5"
+                      value="<%= template.Q5 %>" required="required"
+                    />
+                  </div>
+                </div>
+                <br />
+                <fieldset class="form-group">
+                  <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
+                    <div class="col-sm-10">
+                      <textarea class="form-control" id="a1q6TextField" rows="3"></textarea>
+                    </div>
+                    <br />
+                    <br />
+                  </div>
+                </fieldset>
+                <br />
+                <div class="form-group row">
+                  <legend class="col-form-label col-sm-2 pt-0">Q6</legend>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="q6TextField" placeholder="Type Q6 here" name="Q6"
+                      value="<%= template.Q6 %>" required="required" 
+                    />
                   </div>
                 </div>
                 <br />
@@ -352,83 +222,197 @@
                     <div class="col-sm-10">
                       <textarea class="form-control" id="a1q4TextField" rows="3"></textarea>
                     </div>
+                  </div>
                 </fieldset>
                 <br />
-
-                <div class="form-group row">
-                  <legend class="col-form-label col-sm-2 pt-0">Q4</legend>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="q3TextField" placeholder="Type Q4 here" name="Q4"
-                      value="<%= template.Q4 %>" required />
-                  </div>
-                </div>
                 <br />
-                <fieldset class="form-group">
-                  <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
+                <div class="form-group">
+                  <button class="btn btn-primary" type="submit" style="margin-bottom: 100px;">
+                    <i class="fas fa-edit"></i>Submit
+                  </button>
+
+                  <a href="/template-list" class="btn btn-warning" style="margin-bottom: 100px;">
+                    <i class="fas fa-undo"></i>Cancel
+                  </a>
+                </div>
+              </form> %>
+
+              <% } else if (template.Name=="Template 2" ){ %>
+                <form class="form" method="post">
+                  <div class="form-group row">
+                    <legend class="col-form-label col-sm-2 pt-0" style="padding-left: 0;">Description</legend>
                     <div class="col-sm-10">
-                      <textarea class="form-control" id="a1q4TextField" rows="3"></textarea>
+                      <input type="text" class="form-control" id="q1TextField"
+                        placeholder="Enter a description for the survay:" name="Description"
+                        value="<%= template.Description %>" required="required" 
+                      />
                     </div>
-             
-              <br />
-              <br />
-          </div>
-        </fieldset>
-        <br />
-        <div class="form-group row">
-          <legend class="col-form-label col-sm-2 pt-0">Q5</legend>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="q3TextField" placeholder="Type Q5 here" name="Q5"
-              value="<%= template.Q5 %>" required />
+                  </div>
+                  <br />
+
+                  <div class="form-group row">
+                    <legend class="col-form-label col-sm-2 pt-0">Q1</legend>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="q1TextField" placeholder="Type Q1 here" name="Q1"
+                        value="<%= template.Q1 %>" required="required" 
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
+                      <div class="col-sm-5">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" id="a1q1GridRadios" name="AQ1"
+                            value="<%= template.A1Q1 %>" />
+                          <!--value="option1" was the original value-->
+                          <input class="form-control" type="text" id="a1q1TextField" name="A1Q1"
+                            placeholder="First answer" value="<%= template.A1Q1 %>" required="required"
+                          />
+
+                          <input class="form-check-input" type="radio" id="a2q1GridRadios" name="AQ1"
+                            value="<%= template.A2Q1 %>" 
+                          />
+                          <!--value="option2" was the original value-->
+                          <input class="form-control" type="text" id="a2q1TextField" name="A2Q1"
+                            placeholder="Second answer" value="<%= template.A2Q1 %>" required="required"
+                           />
+
+                          <input type="hidden" id="a3q6TextField" name="A3Q1" value="<%= template.A3Q1 %>" />
+
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <br />
+                  <div class="form-group row">
+                    <legend class="col-form-label col-sm-2 pt-0">Q2</legend>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="q2TextField" placeholder="Type Q2 here" name="Q2"
+                        value="<%= template.Q2 %>" required="required" 
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
+                      <div class="col-sm-5">
+
+                        <input class="form-control" type="text" id="a1q2TextField" name="A1Q2"
+                          placeholder="First answer" value="<%= template.A1Q2 %>" required="required"
+                        />
+
+                        <!--value="option2" was the original value-->
+                        <input class="form-control" type="text" id="a2q2TextField" name="A2Q2"
+                          placeholder="Second answer" value="<%= template.A2Q2 %>" required="required"
+                        />
+
+                        <!--value="option3" was the original value-->
+                        <input type="hidden" id="a3q2TextField" name="A3Q2" value="<%= template.A3Q1 %>" />
+
+                        <!--value="option4" was the original value-->
+                        <input type="hidden" id="a4q2TextField" name="A3Q1" value="<%= template.A4Q2 %>" />
+                      </div>
+                    </div>
+                  </fieldset>
+                  <br />
+                  <div class="form-group row">
+                    <legend class="col-form-label col-sm-2 pt-0">Q3</legend>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="q3TextField" placeholder="Type Q3 here" name="Q3"
+                        value="<%= template.Q3 %>" required="required" 
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" id="a1q4TextField" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <br />
+
+                  <div class="form-group row">
+                    <legend class="col-form-label col-sm-2 pt-0">Q4</legend>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="q3TextField" placeholder="Type Q4 here" name="Q4"
+                        value="<%= template.Q4 %>" required="required" 
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" id="a1q4TextField" rows="3"></textarea>
+                      </div>
+
+                      <br />
+                      <br />
+                    </div>
+                  </fieldset>
+                  <br />
+                  <div class="form-group row">
+                    <legend class="col-form-label col-sm-2 pt-0">Q5</legend>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="q3TextField" placeholder="Type Q5 here" name="Q5"
+                        value="<%= template.Q5 %>" required="required" 
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" id="a1q6TextField" rows="3"></textarea>
+                      </div>
+
+                      <br />
+                      <br />
+                    </div>
+                  </fieldset>
+                  <br />
+                  <div class="form-group row">
+                    <legend class="col-form-label col-sm-2 pt-0">Q6</legend>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="q6TextField" placeholder="Type Q6 here" name="Q6"
+                        value="<%= template.Q6 %>" required="required" 
+                      />
+                    </div>
+                  </div>
+                  <br />
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" id="a1q4TextField" rows="3"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <br />
+                  <br />
+                  <div class="form-group">
+                    <button class="btn btn-primary" type="submit" style="margin-bottom: 100px;">
+                      <i class="fas fa-edit"></i>Submit
+                    </button>
+
+                    <a href="/template-list" class="btn btn-warning" style="margin-bottom: 100px;">
+                      <i class="fas fa-undo"></i>Cancel
+                    </a>
+                  </div>
+                </form>
+                <% } %>
           </div>
         </div>
-        <br />
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
-            <div class="col-sm-10">
-              <textarea class="form-control" id="a1q6TextField" rows="3"></textarea>
-            </div>
-            
-            <br />
-            <br />
-         </div>
-        </fieldset>
-        <br />
-        <div class="form-group row">
-          <legend class="col-form-label col-sm-2 pt-0">Q6</legend>
-          <div class="col-sm-10">
-            <input type="text" class="form-control" id="q6TextField" placeholder="Type Q6 here" name="Q6"
-              value="<%= template.Q6 %>" required />
-          </div>
-        </div>
-        <br />
-        <fieldset class="form-group">
-          <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Answer</legend>
-            <div class="col-sm-10">
-              <textarea class="form-control" id="a1q4TextField" rows="3"></textarea>
-            </div>
-           
-        </fieldset>
-        <br />
-        <br />
-        <div class="survey_buttons">
-        <button class="btn btn-primary" type="submit" style="margin-bottom: 100px;">
-          <i class="fas fa-edit"></i>Submit
-        </button>
-
-        <a href="/template-list" class="btn btn-warning" style="margin-bottom: 100px;">
-          <i class="fas fa-undo"></i>Cancel
-        </a>
-
-      </div>
-        </form>
-        <% } %>
       </div>
     </div>
-    </div>
+  <%- include('../partials/bottom_nav.ejs') %>
 
-    <%- include('../partials/bottom_nav.ejs') %>
-
-      <%- include('../partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %>
