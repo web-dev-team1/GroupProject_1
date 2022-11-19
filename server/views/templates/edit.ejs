@@ -6,7 +6,7 @@
     <div class="template_content" style="margin-bottom: 80px;">
       <div class="container">
         <div class="row" style="padding-top: 48px;">
-          <div class="offset-md-3 col-md-6">
+          <div class="offset-md-2 col-md-8">
             <h1>
               <%=title %>
                 <%=template.Name %>
@@ -73,11 +73,11 @@
                       <!--value="option1" was the original value-->
                       <input class="form-control" type="text" id="a1q2TextField" name="A1Q2" placeholder="First answer"
                         value="<%= template.A1Q2 %>" />
-                        <br />
-                        <br />
+
                       <!--value="option2" was the original value-->
-                      <input class="form-control" type="text" id="a2q2TextField" name="A2Q2" placeholder="Second answer"
-                        value="<%= template.A2Q2 %>" />
+                      <input type="hidden" id="a4q1TextField" name="A2Q2" value="<%= template.A2Q2 %>" />
+                     
+                        
 
                       <!--value="option3" was the original value-->
                       <input type="hidden" id="a3q2TextField" name="A3Q2" value="<%= template.A3Q1 %>" />

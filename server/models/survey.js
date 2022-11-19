@@ -4,12 +4,20 @@ let mongoose = require('mongoose');
 
 // Create a model class
 let surveyModel = mongoose.Schema({
-    gender: String,
-    age: String,
-    marital_status: String,
-    annual_income: String,
-    employment_status: String,
-    education_level: String,
+    templateID: String,
+    templateName: String,
+    Q1: String,
+    AQ1: String,
+    Q2: String,
+    AQ2: String,
+    Q3: String,
+    AQ3: String,
+    Q4: String,
+    AQ4: String,
+    Q5: String,
+    AQ5: String,
+    Q6: String,
+    AQ6: String,
 },
 {
     collection: "surveys"

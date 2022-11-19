@@ -97,6 +97,7 @@ module.exports.displayTemplateList = (req, res, next) => {
       A2Q6: req.body.A2Q6,
       A3Q6: req.body.A3Q6,
       A4Q6: req.body.A4Q6,
+
     });
     Template.updateOne({ _id: id }, updatetemplate, (err) => {
       if (err) {

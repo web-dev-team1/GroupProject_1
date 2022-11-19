@@ -36,7 +36,6 @@ let templateModel = mongoose.Schema({
     A2Q6: String,
     A3Q6: String,
     A4Q6: String,
-
 },
 {
     collection: "templates"
