@@ -10,6 +10,8 @@
     <%- include('contents/contact_content.ejs') %>
   <% } else if (title == "Survey"){ %>
     <%- include('contents/survey_content.ejs') %> 
+    <% } else if (title == "Statistics"){ %>
+      <%- include('contents/results.ejs') %> 
   <% } %>
   
 <%- include('partials/bottom_nav.ejs') %>

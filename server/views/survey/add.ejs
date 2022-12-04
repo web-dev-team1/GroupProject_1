@@ -11,9 +11,9 @@
                         <h1>
                             <% title %>
                         </h1>
-                        <% if (template.Name=="Template 1" ) { %>
+                        <% if (template.Name=="Survey 1" ) { %>
                         <!-- FORM SURVEY 1 -->
-                        <form class="form" method="post">
+                        <form class="form" method="post" id="form-print">
                             <div class="row">
                                 <div class="col-sm-10">
                                     <h4>
@@ -38,11 +38,11 @@
                             <fieldset>
                                 <div class="form-check">
                                     <div class="input-group">      
-                                        <input class="form-check-input me-2" type="radio" id="radioAQ1" name="AQ1" value="<%= template.A1Q1 %>"/>
+                                        <input class="form-check-input me-2" type="radio" id="radioAQ1" name="AQ1" required value="<%= template.A1Q1 %>"/>
                                         <%= template.A1Q1 %>
                                     </div>
                                     <div class="input-group">  
-                                        <input class="form-check-input me-2" type="radio" id="radioAQ1" name="AQ1" value="<%= template.A2Q1 %>"/>
+                                        <input class="form-check-input me-2" type="radio" id="radioAQ1" name="AQ1" required value="<%= template.A2Q1 %>"/>
                                         <%= template.A2Q1 %>
                                     </div>
                                 </div>
@@ -54,18 +54,11 @@
                                 <input type="hidden" value="<%= template.Q2 %>" name="Q2"/>
                             </div>
                             <fieldset>
-                                <div class="col-sm-10">
-                                    <!-- <input class="form-check-input" type="radio" id="a1q2GridRadios" name="a1q2Radio"
-                                        value="<%= template.A1Q2 %>">-->
-                                    <!--value="option1" was the original value-->
-                                    <input class="form-control" type="text" id="a1q2TextField" name="A1Q2" placeholder="First answer"
-                                      value="<%= template.A1Q2 %>" required />
-              
-                                    <!--  <input class="form-check-input" type="radio" id="a2q2GridRadios" name="a2q2Radio"
-                                        value="<%= template.A2Q2 %>">-->
-                                    <!--value="option2" was the original value-->
-                                    <input type="hidden" id="a4q1TextField" name="A2Q2" value="<%= template.A2Q2 %>" />
-                      
+                                <div class="form-check" style="padding-left: 0px;">
+                                    <div class="input-group">
+                                        <textarea class="form-control" name="AQ2" required></textarea>
+                                    </div>
+                                </div>
                             </fieldset>
                             <br/>
                             <!-- QUESTION 3 -->
@@ -76,21 +69,21 @@
                             <fieldset>
                                 <div class="form-check">
                                     <div class="input-group">      
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" value="<%= template.A1Q3 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" required value="<%= template.A1Q3 %>"/>
                                         <%= template.A1Q3 %>
                                     </div>
                                     <div class="input-group">  
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" value="<%= template.A2Q3 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" required value="<%= template.A2Q3 %>"/>
                                         <%= template.A2Q3 %>
                                     </div>
                                 </div>
                                 <div class="form-check">
                                     <div class="input-group">      
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" value="<%= template.A3Q3 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" required value="<%= template.A3Q3 %>"/>
                                         <%= template.A3Q3 %>
                                     </div>
                                     <div class="input-group">  
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" value="<%= template.A4Q3 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ3" name="AQ3" required value="<%= template.A4Q3 %>"/>
                                         <%= template.A4Q3 %>
                                     </div>
                                 </div>
@@ -104,21 +97,21 @@
                             <fieldset>
                                 <div class="form-check">
                                     <div class="input-group">      
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" value="<%= template.A1Q4 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" required value="<%= template.A1Q4 %>"/>
                                         <%= template.A1Q4 %>
                                     </div>
                                     <div class="input-group">  
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" value="<%= template.A2Q4 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" required value="<%= template.A2Q4 %>"/>
                                         <%= template.A2Q4 %>
                                     </div>
                                 </div>
                                 <div class="form-check">
                                     <div class="input-group">      
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" value="<%= template.A3Q4 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" required value="<%= template.A3Q4 %>"/>
                                         <%= template.A3Q4 %>
                                     </div>
                                     <div class="input-group">  
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" value="<%= template.A4Q4 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ4" name="AQ4" required value="<%= template.A4Q4 %>"/>
                                         <%= template.A4Q4 %>
                                     </div>
                                 </div>
@@ -132,7 +125,7 @@
                             <fieldset>
                                 <div class="form-check" style="padding-left: 0px;">
                                     <div class="input-group">   
-                                        <textarea class="form-control" name="AQ5"></textarea>   
+                                        <textarea class="form-control" name="AQ5" required></textarea>   
                                     </div>
                                 </div>
                             </fieldset>
@@ -145,24 +138,24 @@
                             <fieldset>
                                 <div class="form-check" style="padding-left: 0px;">
                                     <div class="input-group">   
-                                        <textarea class="form-control" name="AQ6"></textarea>   
+                                        <textarea class="form-control" name="AQ6" required></textarea>   
                                     </div>
                                 </div>
                             </fieldset>
                             <br/>
-                            <div class="form-group">
-                                <button class="btn btn-primary" type="submit" style="margin-bottom: 100px;">
-                                    <i class="fas fa-edit"></i>Submit
-                                </button>
-
-                                <a href="/survey" class="btn btn-warning" style="margin-bottom: 100px;">
-                                    <i class="fas fa-undo"></i>Cancel
-                                </a>
-                            </div>
                         </form>
-                        <% } else if (template.Name=="Template 2" ){ %>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit" style="margin-bottom: 100px;">
+                                <i class="fas fa-edit"></i>Submit
+                            </button>
+
+                            <a href="/survey" class="btn btn-warning" style="margin-bottom: 100px;">
+                                <i class="fas fa-undo"></i>Cancel
+                            </a>
+                        </div>
+                        <% } else if (template.Name=="Survey 2" ){ %>
                         <!-- FORM SURVEY 2 -->
-                        <form class="form" method="post">
+                        <form class="form" method="post" id="form-print">
                             <div class="row">
                                 <div class="col-sm-10">
                                     <h4>
@@ -188,11 +181,11 @@
                             <fieldset>
                                 <div class="form-check">
                                     <div class="input-group">      
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ1" name="AQ1" value="<%= template.A1Q1 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ1" name="AQ1" required value="<%= template.A1Q1 %>"/>
                                         <%= template.A1Q1 %>
                                     </div>
                                     <div class="input-group">  
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ1" name="AQ1" value="<%= template.A2Q1 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ1" name="AQ1" required value="<%= template.A2Q1 %>"/>
                                         <%= template.A2Q1 %>
                                     </div>
                                 </div>
@@ -206,11 +199,11 @@
                             <fieldset>
                                 <div class="form-check">
                                     <div class="input-group">      
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ2" name="AQ2" value="<%= template.A1Q2 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ2" name="AQ2" required value="<%= template.A1Q2 %>"/>
                                         <%= template.A1Q2 %>
                                     </div>
                                     <div class="input-group">  
-                                        <input class="form-check-input me-1" type="radio" id="radioAQ2" name="AQ2" value="<%= template.A2Q2 %>"/>
+                                        <input class="form-check-input me-1" type="radio" id="radioAQ2" name="AQ2" required value="<%= template.A2Q2 %>"/>
                                         <%= template.A2Q2 %>
                                     </div>
                                 </div>
@@ -224,7 +217,7 @@
                             <fieldset>
                                 <div class="form-check" style="padding-left: 0px;">
                                     <div class="input-group">      
-                                        <textarea class="form-control" name="AQ3"></textarea>   
+                                        <textarea class="form-control" name="AQ3" required></textarea>   
                                     </div>
                                 </div>
                             </fieldset>
@@ -237,7 +230,7 @@
                             <fieldset>
                                 <div class="form-check" style="padding-left: 0px;">
                                     <div class="input-group">      
-                                        <textarea class="form-control" name="AQ4"></textarea>   
+                                        <textarea class="form-control" name="AQ4" required></textarea>   
                                     </div>
                                 </div>
                             </fieldset>
@@ -250,7 +243,7 @@
                             <fieldset>
                                 <div class="form-check" style="padding-left: 0px;">
                                     <div class="input-group">   
-                                        <textarea class="form-control" name="AQ5"></textarea>   
+                                        <textarea class="form-control" name="AQ5" required></textarea>   
                                     </div>
                                 </div>
                             </fieldset>
@@ -263,21 +256,21 @@
                             <fieldset>
                                 <div class="form-check" style="padding-left: 0px;">
                                     <div class="input-group">   
-                                        <textarea class="form-control" name="AQ6"></textarea>   
+                                        <textarea class="form-control" name="AQ6" required></textarea>   
                                     </div>
                                 </div>
                             </fieldset>
                             <br/>
-                            <div class="form-group">
-                                <button class="btn btn-primary" type="submit" style="margin-bottom: 100px;">
-                                    <i class="fas fa-edit"></i>Submit
-                                </button>
-
-                                <a href="/survey" class="btn btn-warning" style="margin-bottom: 100px;">
-                                    <i class="fas fa-undo"></i>Cancel
-                                </a>
-                            </div>
                         </form>
+                        <div class="form-group">
+                            <button class="btn btn-primary" style="margin-bottom: 100px;">
+                                <i class="fas fa-edit"></i>Submit
+                            </button>
+
+                            <a href="/survey" class="btn btn-warning" style="margin-bottom: 100px;">
+                                <i class="fas fa-undo"></i>Cancel
+                            </a>
+                        </div>
                         <% } %>
                     </div>
                 </div>

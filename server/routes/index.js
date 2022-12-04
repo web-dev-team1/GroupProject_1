@@ -33,10 +33,8 @@ router.get("/logout", indexController.performLogout);
 /* GET Template List Content page. */
 router.get("/survey", indexController.displaySurvey);
 
-/* POST Route for processing the Register page */
-// router.post("/template", indexController.processSurveyContentPage);
-
-
+/* GET Route for displaying the Results page*/
+router.get("/results", indexController.displayResultsPage);
 
 module.exports = router;
 
