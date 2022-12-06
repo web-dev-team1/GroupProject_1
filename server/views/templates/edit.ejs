@@ -11,7 +11,7 @@
               <%=title %>
                 <%=template.Name %>
             </h1>
-            <% if (template.Name=="Template 1" ) { %>
+            <% if (template.Name=="Survey 1" ) { %>
 
               <form class="form" method="post">
                 <div class="form-group row">
@@ -75,9 +75,7 @@
                         value="<%= template.A1Q2 %>" />
 
                       <!--value="option2" was the original value-->
-                      <input type="hidden" id="a4q1TextField" name="A2Q2" value="<%= template.A2Q2 %>" />
-                     
-                        
+                      <input type="hidden" id="a4q1TextField" name="A2Q2" value="<%= template.A2Q2 %>" />                   
 
                       <!--value="option3" was the original value-->
                       <input type="hidden" id="a3q2TextField" name="A3Q2" value="<%= template.A3Q1 %>" />
@@ -238,7 +236,7 @@
                 </div>
               </form> %>
 
-              <% } else if (template.Name=="Template 2" ){ %>
+              <% } else if (template.Name=="Survey 2" ){ %>
                 <form class="form" method="post">
                   <div class="form-group row">
                     <legend class="col-form-label col-sm-2 pt-0" style="padding-left: 0;">Description</legend>

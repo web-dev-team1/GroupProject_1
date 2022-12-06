@@ -17,33 +17,6 @@ module.exports.displayTemplateList = (req, res, next) => {
         }
     });
 };
-
-// module.exports.addpage = (req, res, next) => {
-//     res.render("survey/add", {
-//       title: "Add Survey",
-//       displayName: req.user ? req.user.displayName : "",
-//     });
-//   };
-  
-//   module.exports.addprocesspage = (req, res, next) => {
-//     let newSurvey = Survey({
-//       gender: req.body.gender,
-//       age: req.body.age,
-//       annual_income: req.body.annual_income,
-//       marital_status: req.body.marital_status,
-//       employment_status: req.body.employment_status,
-//       education_level: req.body.education_level,
-//     });
-//     Survey.create(newSurvey, (err, Survey) => {
-//       if (err) {
-//         console.log(err);
-//         res.end(err);
-//       } else {
-//         // refresh the survey list
-//         res.redirect("/survey-list");
-//       }
-//     });
-//   };
   
   module.exports.displayeditpage = (req, res, next) => {
     let id = req.params.id; //id of actual object
@@ -110,15 +83,3 @@ module.exports.displayTemplateList = (req, res, next) => {
     });
   };
   
-  // module.exports.deletepage = (req, res, next) => {
-  //   let id = req.params.id;
-  //   Survey.remove({ _id: id }, (err) => {
-  //     if (err) {
-  //       console.log(err);
-  //       res.end(err);
-  //     } else {
-  //       //refresh contact list
-  //       res.redirect("/template_list");
-  //     }
-  //   });
-  // };

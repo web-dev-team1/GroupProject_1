@@ -19,20 +19,10 @@ function requireAuth(req, res, next) {
 router.get("/", surveyController.displaySurveyList);
 
 /* GET Route for displaying the Add page - CREATE Operation */
-// router.get("/add", requireAuth, surveyController.addpage);
 router.get("/add/:id", surveyController.addpage);
-//router.get("/add", surveyController.addpage);
 
 /* POST Route for processing the Add page - CREATE Operation */
-//router.post("/add", requireAuth, surveyController.addprocesspage);
-//router.post("/add", surveyController.addprocesspage);
 router.post("/add/:id", surveyController.addprocesspage);
-
-/* GET Route for displaying the Edit page - UPDATE Operation */
-//router.get("/edit/:id", requireAuth, surveyController.displayeditpage);
-
-/* POST Route for processing the Edit page - UPDATE Operation */
-//router.post("/edit/:id", requireAuth, surveyController.processingeditpage);
 
 /* GET to perform  Deletion - DELETE Operation */
 router.get("/delete/:id", requireAuth, surveyController.deletepage);

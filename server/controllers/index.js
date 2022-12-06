@@ -20,15 +20,10 @@
  module.exports.displayAboutMepage = (req, res, next) => {
    res.render("index", { title: "About Me", displayName: req.user? req.user.displayName : ''});
  };
- 
- //change to display survey
-//  module.exports.displayProjectspage = (req, res, next) => {
-//    res.render("index", { title: "Projects", displayName: req.user? req.user.displayName : ''});
-//  };
- 
-//  module.exports.displayServicespage = (req, res, next) => {
-//    res.render("index", { title: "Services", displayName: req.user? req.user.displayName : ''});
-//  };
+
+ module.exports.displayResultsPage = (req, res, next) => {
+  res.render("index", { title: "Statistics", displayName: req.user? req.user.displayName : ''});
+ };
  
  module.exports.displayContactMepage = (req, res, next) => {
    res.render("index", { title: "Contact Me", displayName: req.user? req.user.displayName : ''});
@@ -37,15 +32,6 @@
  module.exports.displaySurvey = (req, res, next) => {
   res.render("index", { title: "Survey", displayName: req.user? req.user.displayName : ''});
 };
-
-//Processing Survey Content Page
-// module.exports.processSurveyContentPage = (req, res, next) => {
-//   passport.authenticate("local", (err, user, info) => {
-//           req.template(user, (err) => {
-//            return res.redirect("/survey-list/add");
-//     });
-//   })(req, res, next);
-// };
 
  module.exports.displayLoginPage = (req, res, next) => {
    // check if the user is already logged in
@@ -129,11 +115,6 @@
      }
    });
  };
- 
- // module.exports.performLogout = (req, res, next) => {
- //   req.logOut();
- //   res.redirect("/");
- // };
  
  module.exports.performLogout = (req, res, next) => {
    req.logout(function(err) {

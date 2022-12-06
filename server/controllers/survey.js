@@ -20,11 +20,6 @@ module.exports.displaySurveyList = (req, res, next) => {
 };
 
 module.exports.addpage = (req, res, next) => {
-    // res.render("survey/add", {
-    //   title: "Survey",
-    //   displayName: req.user ? req.user.displayName : "",
-    // });
-
     let id = req.params.id; //id of actual object
   
     Template.findById(id, (err, addpage) => {
