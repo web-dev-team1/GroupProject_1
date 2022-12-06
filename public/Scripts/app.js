@@ -13,8 +13,12 @@
             });
         }
 
+<<<<<<< HEAD
        //let submitForm = document.querySelectorAll(".btn-primary");
         let submitForm = document.getElementsByName("submitForm");
+=======
+        let submitForm = document.querySelectorAll(".btn-primary");
+>>>>>>> d2dbb7c06381250b87e9c0776e6a79c860e7dd0e
         for(button of submitForm) {
             button.addEventListener("click", (event) => {
                if (confirm("Do you want to save the survey in a pdf file?")) {
